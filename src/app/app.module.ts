@@ -17,13 +17,15 @@ import { LoginComponent } from './login/login.component';
 import { SuryaListComponent } from './surya-list/surya-list.component';
 
 import {DataService} from './services/data.service';
+import { CryptographyComponent } from './cryptography/cryptography.component';
 
 
 const appRoute: Routes = [
-  {path:'home',component: HeaderComponent},
-  {path:'login', component:LoginComponent},
-  {path:'surya', component:SuryaListComponent},
-  {path:'', redirectTo:'/home', pathMatch:'full'}
+  {path: 'home', component: HeaderComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'surya', component: SuryaListComponent},
+  {path: 'crypto', component: CryptographyComponent},
+  {path:'', redirectTo: '/home', pathMatch: 'full'}
 
 
 ];
@@ -36,10 +38,12 @@ const appRoute: Routes = [
     SidebarComponent,
     LoginComponent,
     SuryaListComponent,
+    CryptographyComponent,
 
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,HttpModule,RouterModule.forRoot(appRoute,{useHash: true}),FormsModule,
+    BrowserModule, BrowserAnimationsModule, HttpModule, RouterModule.forRoot(appRoute, { useHash: true}),
+    FormsModule,
     MdButtonModule,
     MdCardModule,
     MdMenuModule,
